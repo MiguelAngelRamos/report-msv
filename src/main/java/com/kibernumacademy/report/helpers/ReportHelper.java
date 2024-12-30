@@ -33,7 +33,7 @@ public class ReportHelper {
 
   public List<String> getPlaceHoldersFromTemplate(String template) {
     List<String> placeholders = new ArrayList<>();
-    Pattern pattern = Pattern.compile("\\{(.*?)}\\}"); // Busca cualquier texto que estre entre {}  El cuantificador es .*? "no codicioso"
+    Pattern pattern = Pattern.compile("\\{(.*?)\\}"); // Busca cualquier texto que estre entre {}  El cuantificador es .*? "no codicioso"
     Matcher matcher = pattern.matcher(template);
 
     while(matcher.find()) {
