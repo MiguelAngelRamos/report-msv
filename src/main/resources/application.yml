@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: report-msv
+  profiles:
+    default: default
+  config:
+    import: optional:configserver:http://localhost:8888
+server:
+  port: ${PORT:7070}
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
