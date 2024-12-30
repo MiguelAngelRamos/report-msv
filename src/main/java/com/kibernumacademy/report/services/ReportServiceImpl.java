@@ -50,8 +50,7 @@ public class ReportServiceImpl implements ReportService{
 
   @Override
   public void deleteReport(String name) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'deleteReport'");
+    this.companyRepository.deleteByName(name);
   }
   
 }
